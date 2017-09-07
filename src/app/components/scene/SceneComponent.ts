@@ -39,6 +39,12 @@ export class SceneComponent implements OnInit {
     scene.activeCameras.push(camera);
     camera.attachControl(canvas, false);
 
+    // import object
+    BABYLON.SceneLoader.ImportMesh('', 'assets/robot/', 'base.babylon', scene, function (meshes) {
+    }, null, function (sc, message, exception) { });
+    BABYLON.SceneLoader.ImportMesh('', 'assets/robot/', 'hand.babylon', scene, function (meshes) {
+    }, null, function (sc, message, exception) { });
+
     let i = 0;
     // Register a render loop to repeatedly render the scene
     engine.runRenderLoop(function () {

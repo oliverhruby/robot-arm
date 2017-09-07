@@ -1,1 +1,5 @@
-<div>Here be stats</div>
+<div class="stats">
+  <div *ngFor="let part of parts" class="part">
+    <div>{{part.name}} [{{part.position.x}},{{part.position.y}},{{part.position.z}},{{part.rotation.x}},{{part.rotation.y}},{{part.rotation.z}}]</div>
+  </div>
+</div>
